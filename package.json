@@ -1,0 +1,26 @@
+{
+  "name": "sumsub-integration",
+  "version": "1.0.0",
+  "description": "Sumsub itegration example for front-end",
+  "main": "index.js",
+  "scripts": {
+    "start": "browserify ./src/main.js > ./dist/bundle.js -d",
+    "build": "mkdir -p ./dist && browserify ./src/main.js > ./dist/bundle.js -t babelify --plugin tinyify",
+    "watch": "watchify ./src/main.js -o ./dist/bundle.js -t babelify -d -v"
+  },
+  "repository": "git@github.com:shamil8/sumsub-integration.git",
+  "author": "Shamil Qurbonov <qurbonovshamil@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@sumsub/websdk": "^1.2.1",
+    "dotenv": "^10.0.0",
+    "tinyify": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "watchify": "^4.0.0"
+  }
+}
